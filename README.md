@@ -1,11 +1,16 @@
 # doc-jquery
 
+Un peu de doc sur Jquery qui me semble essentielle pour comprendre la bibliothèque. Tout ce qui est écrit ici provient principalement directement de [la doc officielle](https://learn.jquery.com/using-jquery-core/).
+
 Why use Jquery ?
 
 - convenience
 - compatibility across browsers
 
 ## Jquery object
+
+
+### Overview
 
 The Jquery object is an abstraction layer over any DOM element.
 
@@ -34,6 +39,23 @@ alert( logo1 === logo2 ); // alerts "true"
 ~~~
 
 Important : **jQuery Objects Are Not "Live" !**  The set of elements contained within a jQuery object will not change unless explicitly modified. This means that the collection is not "live" – it does not automatically update as the document changes.
+
+### $ vs $()
+
+Until now, we've been dealing entirely with methods that are called on a jQuery object. For example:
+
+~~~js
+$( "h1" ).remove();
+~~~
+
+Most jQuery methods are called on jQuery objects as shown above; these methods are said to be part of the $.fn namespace, or the "jQuery prototype," and are best thought of as jQuery object methods.
+
+However, there are several methods that do not act on a selection; these methods are said to be part of the jQuery namespace, and are best thought of as core jQuery methods.
+
+This distinction can be incredibly confusing to new jQuery users. Here's what you need to remember:
+
+- Methods called on jQuery selections are in the $.fn namespace, and automatically receive and return the selection as `this`.
+- Methods in the $ namespace are generally utility-type methods, and do not work with selections; they are not automatically passed any arguments, and their return value will vary.
 
 
 ### Useful methods of the Jquery Object
