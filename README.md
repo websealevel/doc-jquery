@@ -47,3 +47,4 @@ Important : **jQuery Objects Are Not "Live" !**  The set of elements contained w
 
 - [using jquery core](https://learn.jquery.com/using-jquery-core/)
 - [the jquery object](https://learn.jquery.com/using-jquery-core/jquery-object/)
+- [animation](https://learn.jquery.com/effects/custom-effects/)
